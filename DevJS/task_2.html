@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+	<div class="maincontent">
+    <header class="text-center">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Javascript task #2</h1>
+              <p class="lead">Write a JavaScript program to calculate days left until next Christmas.</p>
+            </div>
+          </div>
+    </header>   
+	
+	<div class="row">
+		<div class="col">
+		<div class="card h-100">
+      <div class="card-body input-data">
+        <h5 class="card-title">Today is</h5>
+        <p class="card-text mb-5"></p>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="calculateDays();">Calculate days to Christmas</button>
+      </div>
+    </div>
+		
+		</div>
+		<div class="col">
+            <div class="card text-center h-100">
+				<div class="message card-body d-flex flex-column justify-content-between">
+				  <p class="card-subtitle">Until</p>
+				  <h5>next Christmas</h5>
+				  <p class="card-text h1 border result">???</p>
+				  <p class="card-text">days left.</p>
+				</div>
+            </div>
+		</div>
+	</div>
+	</div>
+    <script src="scripts/task_2.js"></script>
+</body>
+
+</html>
