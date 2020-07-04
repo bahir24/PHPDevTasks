@@ -1,3 +1,5 @@
+var resultField = document.querySelector('.result');
+
 function generatePallindrom(inputStr) {
     var inputField = inputStr.closest(".input-group").querySelector('input');
     typedStr = inputField.value;
@@ -10,22 +12,23 @@ function generatePallindrom(inputStr) {
         for (descIndex = arrCount - 1, ascIndex = 0; ; ascIndex++, descIndex--) {
 
             if (arrTypedStr[ascIndex] !== arrTypedStr[descIndex]) {
-                for (var shiftIndex = arrTypedStr.length; shiftIndex !== (descIndex + 1); shiftIndex--) {                    
-                    if(ascIndex === 0){
+                for (var shiftIndex = arrTypedStr.length; shiftIndex !== (descIndex + 1); shiftIndex--) {
+                    if (ascIndex === 0) {
                         arrTypedStr[arrCount] = arrTypedStr[arrCount - 1];
                         break;
                     } else {
                         arrTypedStr[shiftIndex] = arrTypedStr[shiftIndex - 1];
-                    }                    
+                    }
                 }
                 arrTypedStr[descIndex + 1] = arrTypedStr[ascIndex];
-                break;                                
+                break;
             }
             if ((descIndex - ascIndex) < 2) {
                 readyFlag = false;
-                console.log(arrTypedStr);
+                var resultString = arrTypedStr.join('');
+                resultField.textContent = resultString;
                 break;
             }
-        }    
-    };    
+        }
+    };
 };
