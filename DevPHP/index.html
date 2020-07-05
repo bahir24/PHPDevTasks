@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+    <header class="text-center">
+        <div class="jumbotron">
+            <div class="container">
+              <h1 class="display-4">Javascript task #1</h1>
+              <p class="lead">Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.</p>
+            </div>
+          </div>
+    </header>   
+    <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">String to change</th>
+            <th scope="col">Run button</th>
+            <th scope="col" style="min-width: 300px;">Result</th>
+            <th scope="col">Expected result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>PYTHON</td>
+            <td><button type="button" class="btn btn-primary mw-100" onclick="replaceLetters(this);">Replace characters</button></td>
+            <td style="color: red"></td>
+            <td>QZUIPO</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>W3R</td>
+            <td><button type="button" class="btn btn-primary mw-100" onclick="replaceLetters(this);">Replace characters</button></td>
+            <td style="color: red"></td>
+            <td>X4S</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>php</td>
+            <td><button type="button" class="btn btn-primary mw-100" onclick="replaceLetters(this);">Replace characters</button></td>
+            <td style="color: red"></td>
+            <td>qIq</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>
+                <input type="text">
+                <small id="emailHelp" class="form-text text-muted">Try any other strings</small>
+            </td>
+            <td><button type="button" class="btn btn-primary mw-100" onclick="replaceLetters(this);">Replace characters</button></td>
+            <td style="color: red"></td>
+            <td>???</td>
+          </tr>
+        </tbody>
+      </table>        
+
+    <script src="scripts/task_1.js"></script>
+</body>
+
+</html>
