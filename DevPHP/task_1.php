@@ -32,10 +32,10 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>
-                        <?php 
+                        <?php                                                 
+                        $dayTimestamp = 24*60*60;
                         $todayDate = time();
                         $todayNumDayWeek = date('N', $todayDate);
-                        $dayTimestamp = 24*60*60;
                         function isWeekend($dayToHandle){
                             $weekDay = date('N', $dayToHandle);
                             if($weekDay < 6){
@@ -54,7 +54,7 @@
                     </td>
                     <td style="color: red">
                         <?php
-                            isWeekend(todayDate);
+                            isWeekend($todayDate);
                         ?>
                     </td>
                     <td>Today</td>
@@ -65,7 +65,7 @@
                         <?php                            
                             // $nextSaturday = $todayNumDayWeek < 6 ? $todayDate + (5 - $todayNumDayWeek)*$dayTimestamp : $todayDate + ()
                             if($todayNumDayWeek < 6){
-                                $nextSaturday = $todayDate + (7 - $todayNumDayWeek)*$dayTimestamp;
+                                $nextSaturday = $todayDate + (6 - $todayNumDayWeek)*$dayTimestamp;
                             } else {
                                 $nextSaturday = $todayDate + (7 - $todayNumDayWeek)*$dayTimestamp + 6*$dayTimestamp;
                             }
@@ -88,7 +88,11 @@
                     <th scope="row">3</th>
                     <td>
                         <?php
-                            $lastMonday = $todayDate - $todayNumDayWeek * $dayTimestamp;
+                            if($todayNumDayWeek == 1){
+                                $lastMonday = $todayDate - $dayTimestamp * 7;
+                            } else {
+                                $lastMonday = $todayDate - ($todayNumDayWeek - 1)*$dayTimestamp;
+                            }
                             echo date('Y-m-d l', $lastMonday);
                         ?>
                     </td>
